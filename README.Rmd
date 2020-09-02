@@ -63,7 +63,7 @@ plt <- function() {
 }
 plt()
 #> Error in eval(expr, p) : Did you forget a `+` in a ggplot call ?
-#> Use `print(geom_point())` to view the object, or set `options(ggerror = FALSE)`
+#> Use `print(geom_point())` to view the object, or set `options(ggfail = FALSE)`
 #> to disable this error.
 ```
 

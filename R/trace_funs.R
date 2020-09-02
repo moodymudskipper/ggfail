@@ -37,7 +37,7 @@ trace_funs <- function(
       if(n != 1 && !plus_call_lgl && !other_allowed_call_lgl) {
         stop("Did you forget a `+` in a ggplot call ?\n",
              "Use `print(", deparse(scs[[n]], width.cutoff = 500), ")` to view the ",
-             "object, or set `options(ggerror = FALSE)` to disable this error."
+             "object, or set `options(ggfail = FALSE)` to disable this error."
         )
       }
     }
