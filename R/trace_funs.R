@@ -51,7 +51,7 @@ trace_funs <- function(
     for (fun in traced_funs) {
       #browser()
       suppressMessages(eval(bquote(
-        trace(.(getExportedValue(pkg, fun)), tracer = tracer, print = FALSE))))
+        trace(.(str2lang(paste0(pkg, "::", fun))), tracer = tracer, print = FALSE))))
       # suppressMessages(eval(bquote(
       #   trace(`::`(.(as.name(pkg)),.(as.name(fun))), tracer = tracer, print = FALSE))))
     }
@@ -75,7 +75,7 @@ untrace_funs <- function(
     for (fun in traced_funs) {
       #browser()
       suppressMessages(eval(bquote(
-        untrace(.(getExportedValue(pkg, fun))))))
+        untrace(.(str2lang(paste0(pkg, "::", fun)))))))
     }
   }
   invisible(NULL)
